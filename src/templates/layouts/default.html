@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>{% block title %}{{ site.settings.siteTitle }}{% if page.title %} - {{ page.title }}{% endif %}{% endblock %}</title>
+
+  <meta charset="utf-8">
+
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/base.css"/>
+  <link rel="stylesheet" href="/stylesheets/feature.css"/>
+  <link rel="stylesheet" href="/stylesheets/footer.css"/>
+  <link rel="stylesheet" href="/stylesheets/header.css"/>
+  <link rel="stylesheet" href="/stylesheets/hero.css"/>
+  <link rel="stylesheet" href="/stylesheets/pagination.css"/>
+  <link rel="stylesheet" href="/stylesheets/products.css"/>
+  <link rel="stylesheet" href="/stylesheets/thumb.css"/>
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.11/default/snipcart.css" />
+
+
+  <link rel="author" href="humans.txt"/>
+</head>
+
+<body>
+{% include "partials/header.html" %}
+
+<div class="main">
+  {% block content %}{% endblock %}
+</div>
+
+{% include "partials/footer.html" %}
+
+<script src="/javascripts/main.js"></script>
+<script src="/javascripts/main.js"></script>
+<!-- Snipcart div and JS here -->
+<div hidden id="snipcart" data-api-key="YzAyZTQ2ZTUtZjk4YS00N2E2LTliNjAtMzhiOGM2OTYzYjgxNjM3Mzk2MTYwOTI4MDk0MTU2"></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.11/default/snipcart.js"></script>
+</body>
+</html>
