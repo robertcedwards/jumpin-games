@@ -20,6 +20,21 @@
               {% endif %}
             </div>
           </a>
+          <a href="{{ page.hero.featuredProduct2 | route('product') }}">
+            <p>Featured Product</p>
+
+            <img src="{{ page.hero.featuredProduct2.image.path | image }}"/>
+
+            <h1>{{ page.hero.featuredProduct2.name }}</h1>
+
+            <div class="price {% if page.hero.featuredProduct2.salePrice %}price--sale{% endif %}">
+              <span>{{ page.hero.featuredProduct2.price }}</span>
+
+              {% if page.hero.featuredProduct2.salePrice %}
+                <span>{{ page.hero.featuredProduct2.salePrice }}</span>
+              {% endif %}
+            </div>
+          </a>
         </div>
       {% endif %}
     </div>
